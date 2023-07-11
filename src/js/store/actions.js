@@ -2,6 +2,7 @@
 export default {
     increment(store) {
         //commits mutation
+        
         store.commit('increment');
     },
     decrement(store) {

@@ -1,13 +1,13 @@
 export default {
-    increment(state, payload) {
-      state.count+=1;
-  
-      return state;
+    increment(store) {
+      store.state.count+=1;
+      console.log(store.state.count)
+      return store;
     },
-    decrement(state, payload) {
-        state.count-=1
+    decrement(store) {
+      store.state.count-=1
   
-      return state;
+      return store;
     }
 };
   

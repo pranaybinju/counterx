@@ -21,7 +21,7 @@ export default class Store {
       }
 
       if(params.hasOwnProperty('mutations')) {
-        self.actions = params.mutations; //set via state initializer
+        self.mutations = params.mutations; //set via state initializer
       }
 
       self.state = new Proxy((params.state || {}), { //set via state initializer
@@ -59,7 +59,7 @@ export default class Store {
         return true;
       }
     //Commit is store's method to update state from internally
-    commit(mutationKey, payload) {
+    commit(mutationKey) {
 
         let self = this;
       
@@ -70,7 +70,7 @@ export default class Store {
     
         //self.status = 'mutation';
         //calls mutations implementaion in mutation.js
-        self.mutations[mutationKey](self, payload);
+        self.mutations[mutationKey](self);
     
         return true;
       }
