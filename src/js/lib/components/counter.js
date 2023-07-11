@@ -1,5 +1,5 @@
-import Component from "./lib/components/index.js";
-import store from "./store/index.js"
+import Component from "./index.js";
+import store from "../../store/index.js"
 
 class Counter extends Component {
 

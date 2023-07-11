@@ -1,4 +1,4 @@
-import Counter from "./counter.js";
+import Counter from "./lib/components/counter.js";
 import store from "./store/index.js";
 
 const element = document.querySelector('.app');
